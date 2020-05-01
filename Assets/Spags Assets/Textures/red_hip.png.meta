@@ -1,0 +1,1340 @@
+fileFormatVersion: 2
+guid: 13a399a940b94b84dbcabf78c6d770d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5385825389779687763
+    second: red_hip_0
+  - first:
+      213: 4041614258410050258
+    second: red_hip_1
+  - first:
+      213: -2286127718166360024
+    second: red_hip_2
+  - first:
+      213: -6848673329846952183
+    second: red_hip_3
+  - first:
+      213: -7522636129594997830
+    second: red_hip_4
+  - first:
+      213: -404364454825852109
+    second: red_hip_5
+  - first:
+      213: -1154836410253001572
+    second: red_hip_6
+  - first:
+      213: -7305097429707438138
+    second: red_hip_7
+  - first:
+      213: -3622779034398844837
+    second: red_hip_8
+  - first:
+      213: 4793700676945786323
+    second: red_hip_9
+  - first:
+      213: 4008134099846951561
+    second: red_hip_10
+  - first:
+      213: 2581880398053170319
+    second: red_hip_11
+  - first:
+      213: -5434154955758485866
+    second: red_hip_12
+  - first:
+      213: -2658299781902126210
+    second: red_hip_13
+  - first:
+      213: -8562272202191702363
+    second: red_hip_14
+  - first:
+      213: 790492630384345955
+    second: red_hip_15
+  - first:
+      213: 1341038913345844246
+    second: red_hip_16
+  - first:
+      213: 3949631051822567110
+    second: red_hip_17
+  - first:
+      213: -137245340007746853
+    second: red_hip_18
+  - first:
+      213: 2441480042574219576
+    second: red_hip_19
+  - first:
+      213: 8089612538312626934
+    second: red_hip_20
+  - first:
+      213: -4731397679710824534
+    second: red_hip_21
+  - first:
+      213: -2386175719432462609
+    second: red_hip_22
+  - first:
+      213: 4343756420074745960
+    second: red_hip_23
+  - first:
+      213: 1587680048574295176
+    second: redCrosshair
+  - first:
+      213: -3807052441796836504
+    second: red_hip_25
+  - first:
+      213: -1002377949668780413
+    second: red_hip_26
+  - first:
+      213: -6875803511263293290
+    second: red_hip_27
+  - first:
+      213: 4303022695279480349
+    second: red_hip_28
+  - first:
+      213: 5524801166332002140
+    second: red_hip_29
+  - first:
+      213: 4250461090707938737
+    second: red_hip_30
+  - first:
+      213: -359252138724690800
+    second: red_hip_31
+  - first:
+      213: -6552950420596086813
+    second: red_hip_32
+  - first:
+      213: 5215343090290515099
+    second: red_hip_33
+  - first:
+      213: 3914730971061188087
+    second: red_hip_34
+  - first:
+      213: 1495578806517621519
+    second: red_hip_35
+  - first:
+      213: 7758006149669272224
+    second: red_hip_36
+  - first:
+      213: -8088728956363198371
+    second: red_hip_37
+  - first:
+      213: -7542396187775326549
+    second: red_hip_38
+  - first:
+      213: -7405129474392698037
+    second: red_hip_39
+  - first:
+      213: -4029096788459735824
+    second: red_hip_40
+  - first:
+      213: 1013709366631277627
+    second: red_hip_41
+  - first:
+      213: -214748119948735579
+    second: red_hip_42
+  - first:
+      213: -2968891168346684569
+    second: red_hip_43
+  - first:
+      213: 9181765401462939934
+    second: red_hip_44
+  - first:
+      213: -535078173143610776
+    second: red_hip_45
+  - first:
+      213: 778930191142060046
+    second: red_hip_46
+  - first:
+      213: -1033169665308163399
+    second: red_hip_47
+  - first:
+      213: -2959794900862022761
+    second: red_hip_48
+  - first:
+      213: 8417363821323927166
+    second: red_hip_49
+  - first:
+      213: -2585463854746337819
+    second: red_hip_50
+  - first:
+      213: 2341296431585001876
+    second: red_hip_51
+  - first:
+      213: 3198697701848517771
+    second: red_hip_52
+  - first:
+      213: -8288805635656334509
+    second: red_hip_53
+  - first:
+      213: 778775809442430111
+    second: red_hip_54
+  - first:
+      213: -7763781095683431139
+    second: red_hip_55
+  - first:
+      213: 7099891214619273343
+    second: red_hip_56
+  - first:
+      213: -8259439641781593574
+    second: red_hip_57
+  - first:
+      213: -4632062311312235425
+    second: red_hip_58
+  - first:
+      213: -3010425766576535370
+    second: red_hip_59
+  - first:
+      213: 8507723413416592440
+    second: red_hip_60
+  - first:
+      213: 7214080607156145188
+    second: red_hip_61
+  - first:
+      213: 1744839152287820677
+    second: red_hip_62
+  - first:
+      213: 60160897931389119
+    second: red_hip_63
+  - first:
+      213: -266416575384338147
+    second: red_hip_64
+  - first:
+      213: -6494606833901362057
+    second: red_hip_65
+  - first:
+      213: -8693422661816392593
+    second: red_hip_66
+  - first:
+      213: -279796872581230018
+    second: red_hip_67
+  - first:
+      213: 6129460764910303862
+    second: red_hip_68
+  - first:
+      213: -6489604245802459025
+    second: red_hip_69
+  - first:
+      213: 404330189673842887
+    second: red_hip_70
+  - first:
+      213: 8006887517814596016
+    second: red_hip_71
+  - first:
+      213: -1124433761918685006
+    second: red_hip_72
+  - first:
+      213: -267046486646006695
+    second: red_hip_73
+  - first:
+      213: 8001090081200527133
+    second: red_hip_74
+  - first:
+      213: -8351447440218680819
+    second: red_hip_75
+  - first:
+      213: 1888028275369476295
+    second: red_hip_76
+  - first:
+      213: 8575865118064515308
+    second: red_hip_77
+  - first:
+      213: -4833170458368690260
+    second: red_hip_78
+  - first:
+      213: 8480779771004218682
+    second: red_hip_79
+  - first:
+      213: 4473442535170236931
+    second: red_hip_80
+  - first:
+      213: 496103000496302672
+    second: red_hip_81
+  - first:
+      213: -1155490001310666792
+    second: red_hip_82
+  - first:
+      213: -5662401400043389493
+    second: red_hip_83
+  - first:
+      213: -3884973687001724832
+    second: red_hip_84
+  - first:
+      213: 6185877110500144495
+    second: red_hip_85
+  - first:
+      213: 4406298688388835773
+    second: red_hip_86
+  - first:
+      213: -7271391569872933384
+    second: red_hip_87
+  - first:
+      213: 470661066811622919
+    second: red_hip_88
+  - first:
+      213: -5169859446795700244
+    second: red_hip_89
+  - first:
+      213: 1418850744757850126
+    second: red_hip_90
+  - first:
+      213: -2020639690931418441
+    second: red_hip_91
+  - first:
+      213: 8895008187182350995
+    second: red_hip_92
+  - first:
+      213: 8578454412559914106
+    second: red_hip_93
+  - first:
+      213: -486386376982295188
+    second: red_hip_94
+  - first:
+      213: 1070870698229520447
+    second: red_hip_95
+  - first:
+      213: -4777475928903079600
+    second: red_hip_96
+  - first:
+      213: 3900442785403859328
+    second: red_hip_97
+  - first:
+      213: 5131959389236743527
+    second: red_hip_98
+  - first:
+      213: -3184419857821058626
+    second: red_hip_99
+  - first:
+      213: 5931800956514104157
+    second: red_hip_100
+  - first:
+      213: 8058928540735738391
+    second: red_hip_101
+  - first:
+      213: -3964436996481778041
+    second: red_hip_102
+  - first:
+      213: -5355897064444439117
+    second: red_hip_103
+  - first:
+      213: 183408399851830228
+    second: red_hip_104
+  - first:
+      213: -6987086987924882260
+    second: red_hip_105
+  - first:
+      213: 1908607171486291696
+    second: red_hip_106
+  - first:
+      213: 5406065565155182637
+    second: red_hip_107
+  - first:
+      213: -8684743874997348408
+    second: red_hip_108
+  - first:
+      213: 4017211733560775171
+    second: red_hip_109
+  - first:
+      213: 4822464096782322576
+    second: red_hip_110
+  - first:
+      213: 1096052886318984680
+    second: red_hip_111
+  - first:
+      213: 673232880785432188
+    second: red_hip_112
+  - first:
+      213: -2705827824355255671
+    second: red_hip_113
+  - first:
+      213: -6837990180170069754
+    second: red_hip_114
+  - first:
+      213: 7300730293776397124
+    second: red_hip_115
+  - first:
+      213: 6898277782343678804
+    second: red_hip_116
+  - first:
+      213: 2535735844878491798
+    second: red_hip_117
+  - first:
+      213: -1041143473584389976
+    second: red_hip_118
+  - first:
+      213: 6356187215474924209
+    second: red_hip_119
+  - first:
+      213: 2690147554805642764
+    second: red_hip_120
+  - first:
+      213: 8117620420239607728
+    second: red_hip_121
+  - first:
+      213: 8650155208273629239
+    second: red_hip_122
+  - first:
+      213: -6463501657297638340
+    second: red_hip_123
+  - first:
+      213: -8215314724603590235
+    second: red_hip_124
+  - first:
+      213: 7794615554667814320
+    second: red_hip_125
+  - first:
+      213: 4342039684096542021
+    second: red_hip_126
+  - first:
+      213: 5794742188740868519
+    second: red_hip_127
+  - first:
+      213: 992705477947542899
+    second: red_hip_128
+  - first:
+      213: 6582694934722228801
+    second: red_hip_129
+  - first:
+      213: -2711245860675991288
+    second: red_hip_130
+  - first:
+      213: -7624117871888819106
+    second: red_hip_131
+  - first:
+      213: -637484549403896388
+    second: red_hip_132
+  - first:
+      213: -2534032550593458063
+    second: red_hip_133
+  - first:
+      213: 5971979357187505995
+    second: red_hip_134
+  - first:
+      213: -6572908595533389319
+    second: red_hip_135
+  - first:
+      213: -6238567230774841680
+    second: red_hip_136
+  - first:
+      213: -4916345446581953691
+    second: red_hip_137
+  - first:
+      213: 3629276211362246058
+    second: red_hip_138
+  - first:
+      213: -6360742859647965535
+    second: red_hip_139
+  - first:
+      213: -393093913449025881
+    second: red_hip_140
+  - first:
+      213: 8644161928735326443
+    second: red_hip_141
+  - first:
+      213: 5784052837593055092
+    second: red_hip_142
+  - first:
+      213: 6451579194658686220
+    second: red_hip_143
+  - first:
+      213: 4244297364258467234
+    second: red_hip_144
+  - first:
+      213: -5882570779574516860
+    second: red_hip_145
+  - first:
+      213: 6799936866997656957
+    second: red_hip_146
+  - first:
+      213: -8897146197687539382
+    second: red_hip_147
+  - first:
+      213: 7073218537356705295
+    second: red_hip_148
+  - first:
+      213: -6781381348362967121
+    second: red_hip_149
+  - first:
+      213: -5256114610938211316
+    second: red_hip_150
+  - first:
+      213: -6904285108578943004
+    second: red_hip_151
+  - first:
+      213: -1219975060679410402
+    second: red_hip_152
+  - first:
+      213: -4636961747889691269
+    second: red_hip_153
+  - first:
+      213: 431076612007017987
+    second: red_hip_154
+  - first:
+      213: 2754553015018458044
+    second: red_hip_155
+  - first:
+      213: 1620547713417176366
+    second: red_hip_156
+  - first:
+      213: -6440043279413747521
+    second: red_hip_157
+  - first:
+      213: -2313011239461185945
+    second: red_hip_158
+  - first:
+      213: 3592592117494756511
+    second: red_hip_159
+  - first:
+      213: 8851918227276697024
+    second: red_hip_160
+  - first:
+      213: -8755891749547264379
+    second: red_hip_161
+  - first:
+      213: -17401303815706205
+    second: red_hip_162
+  - first:
+      213: 2534192425811459079
+    second: red_hip_163
+  - first:
+      213: -2656906522335637021
+    second: red_hip_164
+  - first:
+      213: 4915561817865321692
+    second: red_hip_165
+  - first:
+      213: -3486319776219663475
+    second: red_hip_166
+  - first:
+      213: -9005454744131008501
+    second: red_hip_167
+  - first:
+      213: -3291797183352364898
+    second: red_hip_168
+  - first:
+      213: 191433554938251197
+    second: red_hip_169
+  - first:
+      213: 3515515883186166351
+    second: red_hip_170
+  - first:
+      213: -1467294721089070566
+    second: red_hip_171
+  - first:
+      213: 1404092967390431893
+    second: red_hip_172
+  - first:
+      213: -28134226332089885
+    second: red_hip_173
+  - first:
+      213: 5164678750984327823
+    second: red_hip_174
+  - first:
+      213: 8316903823796220249
+    second: red_hip_175
+  - first:
+      213: -2118250094031202117
+    second: red_hip_176
+  - first:
+      213: -6084374566223203209
+    second: red_hip_177
+  - first:
+      213: -3272475936162011388
+    second: red_hip_178
+  - first:
+      213: -7162627685703487195
+    second: red_hip_179
+  - first:
+      213: 6476476552443404715
+    second: red_hip_180
+  - first:
+      213: 2468175415538552857
+    second: red_hip_181
+  - first:
+      213: -4679274619790329218
+    second: red_hip_182
+  - first:
+      213: -5023623675412672863
+    second: red_hip_183
+  - first:
+      213: 8653704954171093676
+    second: red_hip_184
+  - first:
+      213: -7133988374351582569
+    second: red_hip_185
+  - first:
+      213: -5100861966229971287
+    second: red_hip_186
+  - first:
+      213: -7689262406047486449
+    second: red_hip_187
+  - first:
+      213: 610145533957289928
+    second: red_hip_188
+  - first:
+      213: 6290976530660360317
+    second: red_hip_189
+  - first:
+      213: -4070864099944946449
+    second: red_hip_190
+  - first:
+      213: -4084373639863833894
+    second: red_hip_191
+  - first:
+      213: 4619488679594000546
+    second: red_hip_192
+  - first:
+      213: 4205728187785599447
+    second: red_hip_193
+  - first:
+      213: -8813622516225770721
+    second: red_hip_194
+  - first:
+      213: -2446829570130410051
+    second: red_hip_195
+  - first:
+      213: 7529205532954593382
+    second: red_hip_196
+  - first:
+      213: 3284352632054733823
+    second: red_hip_197
+  - first:
+      213: 411005951442367343
+    second: red_hip_198
+  - first:
+      213: 2759831715004445642
+    second: red_hip_199
+  - first:
+      213: -5093777272164864789
+    second: red_hip_200
+  - first:
+      213: -3288366943402501623
+    second: red_hip_201
+  - first:
+      213: -5255893259870485386
+    second: red_hip_202
+  - first:
+      213: 5053498705102178737
+    second: red_hip_203
+  - first:
+      213: 5607000358074204800
+    second: red_hip_204
+  - first:
+      213: 1362583151378509843
+    second: red_hip_205
+  - first:
+      213: 2680967729697566502
+    second: red_hip_206
+  - first:
+      213: -3368835206395097233
+    second: red_hip_207
+  - first:
+      213: 232356668496940289
+    second: red_hip_208
+  - first:
+      213: -7083325017326258409
+    second: red_hip_209
+  - first:
+      213: -6317947950742093361
+    second: red_hip_210
+  - first:
+      213: 8120068349209543817
+    second: red_hip_211
+  - first:
+      213: 7025985614354112978
+    second: red_hip_212
+  - first:
+      213: -4753306750170816579
+    second: red_hip_213
+  - first:
+      213: 70989978366006586
+    second: red_hip_214
+  - first:
+      213: 5940019230636935523
+    second: red_hip_215
+  - first:
+      213: 1621061009765754248
+    second: red_hip_216
+  - first:
+      213: 5003657088298313136
+    second: red_hip_217
+  - first:
+      213: 6339661964865709504
+    second: red_hip_218
+  - first:
+      213: -1118720423500103344
+    second: red_hip_219
+  - first:
+      213: -6369962427636742754
+    second: red_hip_220
+  - first:
+      213: 7048014876250051218
+    second: red_hip_221
+  - first:
+      213: -165609090910132461
+    second: red_hip_222
+  - first:
+      213: -427792901204256178
+    second: red_hip_223
+  - first:
+      213: 2066012971389562331
+    second: red_hip_224
+  - first:
+      213: 5373984823314669163
+    second: red_hip_225
+  - first:
+      213: -3664588319972609952
+    second: red_hip_226
+  - first:
+      213: 7302668528544933583
+    second: red_hip_227
+  - first:
+      213: 1336398350468722341
+    second: red_hip_228
+  - first:
+      213: 3608294906235877099
+    second: red_hip_229
+  - first:
+      213: -1010018306243539084
+    second: red_hip_230
+  - first:
+      213: -3897635570339142203
+    second: red_hip_231
+  - first:
+      213: -7937940511870237722
+    second: red_hip_232
+  - first:
+      213: -3644944895438808521
+    second: red_hip_233
+  - first:
+      213: -6201938235834602743
+    second: red_hip_234
+  - first:
+      213: 350886637026135082
+    second: red_hip_235
+  - first:
+      213: -5323906530909366415
+    second: red_hip_236
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: red_hip_0
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2440
+        width: 13
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6e6e3e754b145b0800000000000000
+      internalID: -5385825389779687763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_1
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 2340
+        width: 162
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d25faf21c2b61830800000000000000
+      internalID: 4041614258410050258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_2
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 2340
+        width: 161
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8201587e3fa0640e0800000000000000
+      internalID: -2286127718166360024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_3
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 2331
+        width: 161
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fd7cf64ef94f0a0800000000000000
+      internalID: -6848673329846952183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_4
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 2331
+        width: 161
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab388f8fb4a3a9790800000000000000
+      internalID: -7522636129594997830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_5
+      rect:
+        serializedVersion: 2
+        x: 2204
+        y: 2336
+        width: 161
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3338f46bba8636af0800000000000000
+      internalID: -404364454825852109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_6
+      rect:
+        serializedVersion: 2
+        x: 2542
+        y: 2336
+        width: 161
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9cbe29476239ffe0800000000000000
+      internalID: -1154836410253001572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_7
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2101
+        width: 13
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c74bac77941f9a90800000000000000
+      internalID: -7305097429707438138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_8
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 2260
+        width: 138
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b589cea99ad49bdc0800000000000000
+      internalID: -3622779034398844837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_9
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 2141
+        width: 13
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d537e81e55a68240800000000000000
+      internalID: 4793700676945786323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_10
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 2210
+        width: 91
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982f1815ab0cf9730800000000000000
+      internalID: 4008134099846951561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_11
+      rect:
+        serializedVersion: 2
+        x: 2425
+        y: 2170
+        width: 56
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8cd08aea8ea4d320800000000000000
+      internalID: 2581880398053170319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_12
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1115
+        width: 463
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e369febd00694b0800000000000000
+      internalID: -5434154955758485866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_13
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 1130
+        width: 441
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73b931ce62db1bd0800000000000000
+      internalID: -2658299781902126210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_14
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 1115
+        width: 461
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a679260cc2bc2980800000000000000
+      internalID: -8562272202191702363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_15
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 401
+        width: 370
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3638f9febd468fa00800000000000000
+      internalID: 790492630384345955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_16
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 412
+        width: 95
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61474fb59c35c9210800000000000000
+      internalID: 1341038913345844246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_17
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 412
+        width: 94
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce8cbdf388efc630800000000000000
+      internalID: 3949631051822567110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_18
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 412
+        width: 94
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd2b2c52718681ef0800000000000000
+      internalID: -137245340007746853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_19
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 412
+        width: 95
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83987d7c921e1e120800000000000000
+      internalID: 2441480042574219576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_20
+      rect:
+        serializedVersion: 2
+        x: 2342
+        y: 604
+        width: 224
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f29ba43eb3144070800000000000000
+      internalID: 8089612538312626934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_21
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 499
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa79ab9d0e2b65eb0800000000000000
+      internalID: -4731397679710824534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_22
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 522
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feed09f53d992eed0800000000000000
+      internalID: -2386175719432462609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_hip_23
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 399
+        width: 224
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860b069237f184c30800000000000000
+      internalID: 4343756420074745960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redCrosshair
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 396
+        width: 230
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 3, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88cee30a792980610800000000000000
+      internalID: 1587680048574295176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3b1f555e43a804648bc40b827d9794bd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
