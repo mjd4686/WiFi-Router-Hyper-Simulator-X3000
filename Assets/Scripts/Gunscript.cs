@@ -19,6 +19,7 @@ public class Gunscript : MonoBehaviour
 
         if (Physics.Raycast(transform.position, fwd, out hit)){
             print(hit.collider.name);
+            hit.transform.gameObject.GetComponent<Renderer>().material.color = Color.red;
             print("There is something in front of the object!");
         }
     
