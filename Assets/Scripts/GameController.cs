@@ -35,16 +35,18 @@ public class GameController : MonoBehaviour
         
         }
 
-        time += Time.deltaTime;
-        var minutes = time / 60;
-        var seconds = time % 60;
-        //update the label value
-        timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
         
         //routers
         routers = GameObject.FindGameObjectsWithTag("Router");
         if(routers.Length == 0){
             print("All routers destroyed!");
+        }
+        else{
+            time += Time.deltaTime;
+            var minutes = time / 60;
+            var seconds = time % 60;
+            //update the label value
+            timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
         }
     }
 }
