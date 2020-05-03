@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Gunscript : MonoBehaviour
+public class GameController : MonoBehaviour
 {
     public GameObject[] routers;
+
+    public Text timerLabel;
+    private float time;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +34,13 @@ public class Gunscript : MonoBehaviour
             }
         
         }
+
+        time += Time.deltaTime;
+        var minutes = time / 60;
+        var seconds = time % 60;
+        //update the label value
+        timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
+        
         //routers
         routers = GameObject.FindGameObjectsWithTag("Router");
         if(routers.Length == 0){
