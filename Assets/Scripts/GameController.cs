@@ -6,60 +6,42 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public GameObject[] routers;
+    public GameObject[] beacons;
     private float projectileDamage = 30f;
-    // public GameObject[] tierIRouters;
-    // public GameObject[] tierIIRouters;
-    // public GameObject[] tierIIIRouters;
-    // public GameObject[] tierIIIBeacons;
 
     public Text timerLabel;
     private float time;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        // tierIRouters = GameObject.FindGameObjectsWithTag("Tier_1_Router");
-        // tierIIRouters = GameObject.FindGameObjectsWithTag("Tier_2_Router");
-        // tierIIIRouters = GameObject.FindGameObjectsWithTag("Tier_3_Router");
-        // tierIIIBeacons = GameObject.FindGameObjectsWithTag("Tier_3_Beacon");
-
-        // GameObject[][] routerList = { tierIRouters, tierIIRouters, tierIIIRouters, tierIIIBeacons };
-
-        // for(int tier = 1; tier <= routerList.Length; tier++)
-        //     foreach(var router in routerList[tier-1]) {
-        //         DamageSystem newDamageSystem = new DamageSystem(tier);
-        //     }
-        
-    }
+    void Start() {}
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         if (Input.GetMouseButtonDown(0)) {
             Vector3 fwd = transform.TransformDirection(Vector3.forward);
             RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, fwd, out hit)){
-                print(hit.collider.name);
-                if(hit.transform.gameObject.tag == "Router"){
+            if (Physics.Raycast(transform.position, fwd, out hit)) {
+                Debug.Log(hit.collider.name);
+                if (hit.transform.gameObject.tag == "Router") {
                     HealthSystem routerHealth = hit.transform.GetComponent<HealthSystem>();
                     routerHealth.DoDamage(projectileDamage);
-                    // Destroy(hit. transform. gameObject);
-                }
-                else{
-                    print("Didn't shoot router!");
-                }
+                } else if (hit.transform.gameObject.tag == "Beacon") {
+                    HealthSystem beaconHealth = hit.transform.GetComponent<HealthSystem>();
+                    beaconHealth.DoDamage(projectileDamage);
+                } else Debug.Log("Didn't shoot router!");
             }
         
         }
-
         
-        //routers
+        //routers & beacons
         routers = GameObject.FindGameObjectsWithTag("Router");
-        if(routers.Length == 0){
-            print("All routers destroyed!");
+        beacons = GameObject.FindGameObjectsWithTag("Beacon");
+
+        if (routers.Length == 0) {
+            Debug.Log("All routers destroyed!");
         }
-        else{
+        else {
             time += Time.deltaTime;
             var minutes = time / 60;
             var seconds = time % 60;

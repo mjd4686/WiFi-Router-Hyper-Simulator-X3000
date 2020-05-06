@@ -211,7 +211,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c41f95dd996adfd46b67bc817718ad8d,
         type: 3}
       propertyPath: m_TagString
-      value: Router
+      value: Beacon
       objectReference: {fileID: 0}
     - target: {fileID: -178992069341062899, guid: c41f95dd996adfd46b67bc817718ad8d,
         type: 3}
@@ -1865,4 +1865,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   routers: []
+  beacons: []
   timerLabel: {fileID: 1174154663}
