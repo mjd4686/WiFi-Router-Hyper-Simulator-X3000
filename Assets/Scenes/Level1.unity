@@ -360,6 +360,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 67863946}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &249055956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249055955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dfcf9d2a7366ff44b7595ef575d6853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  routerType: 4
 --- !u!65 &249055957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -655,6 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfcf9d2a7366ff44b7595ef575d6853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  routerType: 1
 --- !u!1 &530525976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfcf9d2a7366ff44b7595ef575d6853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  routerType: 1
 --- !u!1 &1122398043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,6 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfcf9d2a7366ff44b7595ef575d6853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  routerType: 2
 --- !u!1001 &1334065838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1485,6 +1501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfcf9d2a7366ff44b7595ef575d6853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  routerType: 1
 --- !u!1001 &1666614635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1709,6 +1726,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 608516561}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1826848009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826848008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dfcf9d2a7366ff44b7595ef575d6853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  routerType: 3
 --- !u!65 &1826848010
 BoxCollider:
   m_ObjectHideFlags: 0
