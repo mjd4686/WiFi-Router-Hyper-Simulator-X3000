@@ -463,6 +463,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.61
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: b9d056aed56a0ed4b94d63dd46cdda1d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 04a658dabac63b0429a311213206f947, type: 2}
     - target: {fileID: -927199367670048503, guid: b9d056aed56a0ed4b94d63dd46cdda1d,
         type: 3}
       propertyPath: m_Name
@@ -1017,7 +1022,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Crosshair
       value: 
-      objectReference: {fileID: 21300048, guid: db63fa1c2adceb141974024b30ffa6db,
+      objectReference: {fileID: 8896710955381800372, guid: 1bae1b3f8c11477459b77c7bd5740ba1,
         type: 3}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
@@ -1072,7 +1077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837609935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17, y: -2.48, z: 0.63}
+  m_LocalPosition: {x: 0.2, y: -3.45, z: 0.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1053441904}
@@ -1857,7 +1862,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.5
       mode: 0
       spread: 0
       speed:
@@ -2467,12 +2472,12 @@ ParticleSystem:
     enabled: 1
     gradient:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 3
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0, b: 0, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -4994,7 +4999,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5977,7 +5982,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053441903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0, z: 0.226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 837609936}
@@ -5990,7 +5995,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053441903}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
@@ -6040,7 +6045,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.05e-43, y: 1.4033e-41, z: 0, w: 4.703997e-10}
+  m_BoundingSphereOverride: {x: 0, y: 1.9254e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -6883,4 +6888,5 @@ MonoBehaviour:
   routers: []
   beacons: []
   muzzleFlash: {fileID: 837609938}
+  impact: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
   timerLabel: {fileID: 1174154663}

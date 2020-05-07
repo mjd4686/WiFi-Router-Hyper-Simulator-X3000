@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     private float projectileDamage = 30f;
 
     public ParticleSystem muzzleFlash;
+    public GameObject impact;
 
     public Text timerLabel;
     private float time;
@@ -32,7 +33,10 @@ public class GameController : MonoBehaviour
                 } else if (hit.transform.gameObject.tag == "Beacon") {
                     HealthSystem beaconHealth = hit.transform.GetComponent<HealthSystem>();
                     beaconHealth.DoDamage(projectileDamage);
-                } else Debug.Log("Didn't shoot router!");
+                } else {
+                    Debug.Log("Didn't shoot router!");
+                    Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal));
+                }
             }
         
         }
