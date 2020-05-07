@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     public GameObject[] beacons;
     private float projectileDamage = 30f;
 
+    public ParticleSystem muzzleFlash;
+
     public Text timerLabel;
     private float time;
 
@@ -18,6 +20,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (Input.GetMouseButtonDown(0)) {
+            muzzleFlash.Play();
             Vector3 fwd = transform.TransformDirection(Vector3.forward);
             RaycastHit hit;
 
