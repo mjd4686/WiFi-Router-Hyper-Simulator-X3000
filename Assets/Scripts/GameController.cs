@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
     public GameObject[] routers;
     public GameObject[] beacons;
     private float projectileDamage = 30f;
+    private float rateOfFire = 0.2f;
+    private float nextShot = 0f;
 
     public ParticleSystem muzzleFlash;
     public GameObject impact;
@@ -20,25 +22,32 @@ public class GameController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetMouseButtonDown(0)) {
-            muzzleFlash.Play();
-            Vector3 fwd = transform.TransformDirection(Vector3.forward);
-            RaycastHit hit;
+        // Fire if mouse clicked
+        // if (Input.GetMouseButtonDown(0)) {
+        //     muzzleFlash.Play();
+        //     Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        //     RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, fwd, out hit)) {
-                Debug.Log(hit.collider.name);
-                if (hit.transform.gameObject.tag == "Router") {
-                    HealthSystem routerHealth = hit.transform.GetComponent<HealthSystem>();
-                    routerHealth.DoDamage(projectileDamage);
-                } else if (hit.transform.gameObject.tag == "Beacon") {
-                    HealthSystem beaconHealth = hit.transform.GetComponent<HealthSystem>();
-                    beaconHealth.DoDamage(projectileDamage);
-                } else {
-                    Debug.Log("Didn't shoot router!");
-                    Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal));
-                }
-            }
+        //     if (Physics.Raycast(transform.position, fwd, out hit)) {
+        //         Debug.Log(hit.collider.name);
+        //         if (hit.transform.gameObject.tag == "Router") {
+        //             HealthSystem routerHealth = hit.transform.GetComponent<HealthSystem>();
+        //             routerHealth.DoDamage(projectileDamage);
+        //         } else if (hit.transform.gameObject.tag == "Beacon") {
+        //             HealthSystem beaconHealth = hit.transform.GetComponent<HealthSystem>();
+        //             beaconHealth.DoDamage(projectileDamage);
+        //         } else {
+        //             Debug.Log("Didn't shoot router!");
+        //             Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal));
+        //         }
+        //     }
         
+        // }
+
+        // Fire if mouse held
+        if (Input.GetButton("Fire1") && Time.time > nextShot){
+            nextShot = Time.time + rateOfFire;
+            fire();
         }
         
         //routers & beacons
@@ -54,6 +63,26 @@ public class GameController : MonoBehaviour
             var seconds = time % 60;
             //update the label value
             timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
+        }
+    }
+
+    void fire() {
+        muzzleFlash.Play();
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, fwd, out hit)) {
+            Debug.Log(hit.collider.name);
+            if (hit.transform.gameObject.tag == "Router") {
+                HealthSystem routerHealth = hit.transform.GetComponent<HealthSystem>();
+                routerHealth.DoDamage(projectileDamage);
+            } else if (hit.transform.gameObject.tag == "Beacon") {
+                HealthSystem beaconHealth = hit.transform.GetComponent<HealthSystem>();
+                beaconHealth.DoDamage(projectileDamage);
+            } else {
+                Debug.Log("Didn't shoot router!");
+                Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal));
+            }
         }
     }
 }

@@ -6888,5 +6888,5 @@ MonoBehaviour:
   routers: []
   beacons: []
   muzzleFlash: {fileID: 837609938}
-  impact: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
+  impact: {fileID: 100002, guid: 07ed67d00b853b3488d253b0ad752dd7, type: 3}
   timerLabel: {fileID: 1174154663}
