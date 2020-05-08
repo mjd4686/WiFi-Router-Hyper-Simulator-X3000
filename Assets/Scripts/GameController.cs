@@ -31,7 +31,8 @@ public class GameController : MonoBehaviour
 
     // game clock
     public Text timerLabel;
-    private float time;
+    // private float time; // for old timer
+    public float currTime; // for slowtime special ability in SpecialAbilities.cs
 
     // public Camera cameraView; // if using camera
 
@@ -51,10 +52,22 @@ public class GameController : MonoBehaviour
                 //update the label value
                 timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
             }
-            //Debug.Log(time--);
+            currTime = time;
+            time--;
             yield return new WaitForSeconds(1);
         }
         Debug.Log("Countdown Complete!");
+    }
+
+    // modify the coroutines from another script (currently only used by SpecialAbilities slowtime)
+    // returns the current time right now, which is makes it less useful for other purposes
+    // add more args if you need to pass new coroutine arguments, inelegant but whatever
+    public float coroutineModifier(string coroutine, bool startOrStop, float coroutineFloatArg) {
+        // startOrStop : true is for starting, false for stopping
+        if(startOrStop) StartCoroutine(coroutine, coroutineFloatArg);
+        else StopCoroutine(coroutine);
+        
+        return currTime;
     }
 
     // Update is called once per frame
