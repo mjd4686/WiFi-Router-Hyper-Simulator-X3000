@@ -8,6 +8,13 @@ public class GameController : MonoBehaviour
     public GameObject[] routers;
     public GameObject[] beacons;
 
+    // crosshair
+    public Image crosshairEngaged;
+
+    // sound effects
+    public AudioSource gunSounds;
+    public AudioClip gunshot;
+
     // damage
     private float projectileDamage = 30f;
 
@@ -40,6 +47,8 @@ public class GameController : MonoBehaviour
     void Start() {
         StartCoroutine ("Countdown", 60f);
         currentShotsFired  = 0;
+        crosshairEngaged.enabled = false;
+        gunSounds = GetComponent<AudioSource>();
     }
 
     private IEnumerator Countdown (float time) { // coroutine responsible for game timer, counts down and displays in the canvas HUD. Ends if all routers are destroyed.
@@ -91,7 +100,7 @@ public class GameController : MonoBehaviour
             StartCoroutine(overheatHUD());
             fire();
         } else {
-            gunAnimation.SetBool("firing", false);
+            gunAnimation.SetBool("firing", false);            
         }
         
         //routers & beacons
@@ -156,6 +165,7 @@ public class GameController : MonoBehaviour
     void fire() { // responsible for all actions related to the raycast shooting
         muzzleFlash.Play();
         gunAnimation.SetBool("firing", true);
+        gunSounds.PlayOneShot(gunshot,1);
         // Vector3 fwd = cameraView.transform.forward; // if we attach a Camera to the script
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         RaycastHit hit;
@@ -166,13 +176,16 @@ public class GameController : MonoBehaviour
             if (hit.transform.gameObject.tag == "Router") { // check the tag of the target being shot and give an appropriate Health System
                 HealthSystem routerHealth = hit.transform.GetComponent<HealthSystem>();
                 routerHealth.DoDamage(projectileDamage);
+                crosshairEngaged.enabled = true;
             } else if (hit.transform.gameObject.tag == "Beacon") {
                 HealthSystem beaconHealth = hit.transform.GetComponent<HealthSystem>();
                 beaconHealth.DoDamage(projectileDamage);
+                crosshairEngaged.enabled = true;
             } else {
                 //Debug.Log("Didn't shoot router!");
                 GameObject impactHit = Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal)); // make an impact particle system
                 Destroy(impactHit, 3f); // clear old impact sites after 3 seconds for performance
+                crosshairEngaged.enabled = false;
             }
         }
     }

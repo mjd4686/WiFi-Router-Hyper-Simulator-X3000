@@ -14,7 +14,7 @@ public class SpecialAbilities : MonoBehaviour
     void Start() {
         dashHUD.enabled = false;    
         superjumpHUD.enabled = false;    
-        slowtimeHUD.enabled = false;    
+        slowtimeHUD.enabled = false;
     }
 
     void Update()
