@@ -11,6 +11,10 @@ public class GameController : MonoBehaviour
     // crosshair
     public Image crosshairEngaged;
 
+    // sound effects
+    public AudioSource gunSounds;
+    public AudioClip gunshot;
+
     // damage
     private float projectileDamage = 30f;
 
@@ -44,6 +48,7 @@ public class GameController : MonoBehaviour
         StartCoroutine ("Countdown", 60f);
         currentShotsFired  = 0;
         crosshairEngaged.enabled = false;
+        gunSounds = GetComponent<AudioSource>();
     }
 
     private IEnumerator Countdown (float time) { // coroutine responsible for game timer, counts down and displays in the canvas HUD. Ends if all routers are destroyed.
@@ -160,6 +165,7 @@ public class GameController : MonoBehaviour
     void fire() { // responsible for all actions related to the raycast shooting
         muzzleFlash.Play();
         gunAnimation.SetBool("firing", true);
+        gunSounds.PlayOneShot(gunshot,1);
         // Vector3 fwd = cameraView.transform.forward; // if we attach a Camera to the script
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         RaycastHit hit;
