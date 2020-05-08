@@ -14,6 +14,9 @@ public class GameController : MonoBehaviour
     // sound effects
     public AudioSource gunSounds;
     public AudioClip gunshot;
+    public AudioClip destroyed;
+    public AudioClip damaged;
+    public AudioClip overheatHiss;
 
     // damage
     private float projectileDamage = 30f;
@@ -112,12 +115,15 @@ public class GameController : MonoBehaviour
         foreach(var router in routers) {
             HealthSystem routerMaxHealth = router.GetComponent<HealthSystem>();
             if(routerMaxHealth.getRouterType() == 3) {
-                if(beacons.Length == 0) Destroy(router);
-                else tierIIIHub.Add(router);
+                if(beacons.Length == 0) {
+                    gunSounds.PlayOneShot(destroyed);
+                    Destroy(router);
+                } else tierIIIHub.Add(router);
             }
         }
         if(tierIIIHub.Count == 0) {
             foreach(var beacon in beacons) {
+                gunSounds.PlayOneShot(destroyed);
                 Destroy(beacon);
             }
         }
@@ -149,6 +155,7 @@ public class GameController : MonoBehaviour
         gunAnimation.SetBool("cooling", true); // trigger cooldown animation
 
         isCoolingDownHUD.text = "Cooling down";
+        gunSounds.PlayOneShot(overheatHiss);
         
         // workaround for the delay causing you to fire before done cooling down by 0.25 secs
         yield return new WaitForSeconds(cooldownTimer - 0.25f);
@@ -175,12 +182,16 @@ public class GameController : MonoBehaviour
             //Debug.Log(hit.collider.name);
             if (hit.transform.gameObject.tag == "Router") { // check the tag of the target being shot and give an appropriate Health System
                 HealthSystem routerHealth = hit.transform.GetComponent<HealthSystem>();
+                if(routerHealth.isDead) gunSounds.PlayOneShot(destroyed);
                 routerHealth.DoDamage(projectileDamage);
                 crosshairEngaged.enabled = true;
+                gunSounds.PlayOneShot(damaged);
             } else if (hit.transform.gameObject.tag == "Beacon") {
                 HealthSystem beaconHealth = hit.transform.GetComponent<HealthSystem>();
+                if(beaconHealth.isDead) gunSounds.PlayOneShot(destroyed);
                 beaconHealth.DoDamage(projectileDamage);
                 crosshairEngaged.enabled = true;
+                gunSounds.PlayOneShot(damaged);
             } else {
                 //Debug.Log("Didn't shoot router!");
                 GameObject impactHit = Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal)); // make an impact particle system

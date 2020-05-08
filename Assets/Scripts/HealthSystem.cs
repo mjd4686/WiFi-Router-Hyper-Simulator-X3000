@@ -6,7 +6,8 @@ public class HealthSystem : MonoBehaviour
 {
     private float originalHealth;
     private float health;
-    public int routerType; // 1 = Tier I, 2 = II, 3 = III hub, 4 = III beacon 
+    public int routerType; // 1 = Tier I, 2 = II, 3 = III hub, 4 = III beacon
+    public bool isDead = false;
 
     // values of the different routers
     private float tier_i = 100f;
@@ -40,7 +41,10 @@ public class HealthSystem : MonoBehaviour
 
     public void DoDamage(float damageAmount) {
         health -= damageAmount;
-        if(health <= 0) Die();
+        if(health <= 0) {
+            isDead = true;
+            Die();
+        }
     }
 
     void Die() {
