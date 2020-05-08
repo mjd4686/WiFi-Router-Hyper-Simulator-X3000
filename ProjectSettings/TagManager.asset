@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - FxTemporaire
+  - Beacon
+  - Router
   layers:
   - Default
   - TransparentFX
@@ -17,9 +20,9 @@ TagManager:
   - Lighting
   - Ground
   - Postprocessing
-  - 
-  - 
-  - 
+  - Player
+  - Routers
+  - Environment
   - 
   - 
   - 
