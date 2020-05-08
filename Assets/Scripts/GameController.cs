@@ -51,7 +51,7 @@ public class GameController : MonoBehaviour
                 //update the label value
                 timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
             }
-            Debug.Log(time--);
+            //Debug.Log(time--);
             yield return new WaitForSeconds(1);
         }
         Debug.Log("Countdown Complete!");
@@ -70,9 +70,9 @@ public class GameController : MonoBehaviour
         // Fire if mouse held
         if (Input.GetButton("Fire1") && Time.time > nextShot){
             nextShot = Time.time + rateOfFire;
+            currentShotsFired -= 1;
             StartCoroutine(overheatHUD());
             fire();
-            currentShotsFired -= 1;
         }
         
         //routers & beacons
@@ -94,6 +94,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator overheatHUD() {
         float cooldownPercentage = Mathf.Round((((float)currentShotsFired / (float)shotsToOverheat) * 100));
+
         cooldownHUD.text = string.Format("Overheat: {0}%", cooldownPercentage);
         yield return new WaitForSeconds(0.25f);
     }
@@ -113,6 +114,7 @@ public class GameController : MonoBehaviour
 
         // restore "ammunition"
         currentShotsFired = shotsToOverheat;
+        cooldownHUD.text = "Overheat: 100%";
         isCooling = false;
         isCoolingDownHUD.text = "";
     }
@@ -125,7 +127,7 @@ public class GameController : MonoBehaviour
 
         if (Physics.Raycast(transform.position, fwd, out hit)) {
         // if (Physics.Raycast(cameraView.transform.position, fwd, out hit, range)) { // see above Camera comment
-            Debug.Log(hit.collider.name);
+            //Debug.Log(hit.collider.name);
             if (hit.transform.gameObject.tag == "Router") { // check the tag of the target being shot and give an appropriate Health System
                 HealthSystem routerHealth = hit.transform.GetComponent<HealthSystem>();
                 routerHealth.DoDamage(projectileDamage);
@@ -133,7 +135,7 @@ public class GameController : MonoBehaviour
                 HealthSystem beaconHealth = hit.transform.GetComponent<HealthSystem>();
                 beaconHealth.DoDamage(projectileDamage);
             } else {
-                Debug.Log("Didn't shoot router!");
+                //Debug.Log("Didn't shoot router!");
                 GameObject impactHit = Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal)); // make an impact particle system
                 Destroy(impactHit, 3f); // clear old impact sites after 3 seconds for performance
             }
