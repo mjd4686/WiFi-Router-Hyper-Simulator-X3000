@@ -21,7 +21,25 @@ public class GameController : MonoBehaviour
     // public Camera cameraView;
 
     // Start is called before the first frame update
-    void Start() {}
+    void Start() {
+        StartCoroutine ("Countdown", 60f);
+    }
+
+    private IEnumerator Countdown (float time) {
+        while (time >= 0f) {
+            if (routers.Length == 0) {
+                Debug.Log("All routers destroyed!");
+            } else {
+                var minutes = (time / 60) - 1;
+                var seconds = time % 60;
+                //update the label value
+                timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
+            }
+            Debug.Log(time--);
+            yield return new WaitForSeconds(1);
+        }
+        Debug.Log("Countdown Complete!");
+    }
 
     // Update is called once per frame
     void Update() {
@@ -35,16 +53,16 @@ public class GameController : MonoBehaviour
         routers = GameObject.FindGameObjectsWithTag("Router");
         beacons = GameObject.FindGameObjectsWithTag("Beacon");
 
-        if (routers.Length == 0) {
-            Debug.Log("All routers destroyed!");
-        }
-        else {
-            time += Time.deltaTime;
-            var minutes = time / 60;
-            var seconds = time % 60;
-            //update the label value
-            timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
-        }
+        // if (routers.Length == 0) {
+        //     Debug.Log("All routers destroyed!");
+        // }
+        // else {
+        //     time += Time.deltaTime;
+        //     var minutes = time / 60;
+        //     var seconds = time % 60;
+        //     //update the label value
+        //     timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
+        // }
     }
 
     void fire() {
