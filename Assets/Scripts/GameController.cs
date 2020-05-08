@@ -72,7 +72,7 @@ public class GameController : MonoBehaviour
         }
 
         // Fire if mouse held
-        if (Input.GetButton("Fire1") && Time.time > nextShot){
+        if (Input.GetMouseButton(0) && Time.time > nextShot){
             nextShot = Time.time + rateOfFire;
             currentShotsFired += 1;
             StartCoroutine(overheatHUD());

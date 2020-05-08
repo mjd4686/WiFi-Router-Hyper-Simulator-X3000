@@ -7,15 +7,20 @@ public class SpecialAbilities : MonoBehaviour
 {
     public FirstPersonAIO fpsController;
     public Image dashHUD;
+    public Image slowfallHUD;
 
     void Start() {
         dashHUD.enabled = false;    
+        slowfallHUD.enabled = false;    
     }
 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Q)) { // Special Ability: DASH
             StartCoroutine(dash());
+        }
+        if(Input.GetKeyDown(KeyCode.E)) { // Special Ability: SLOWFALL
+            StartCoroutine(slowfall());
         }
     }
 
@@ -30,5 +35,12 @@ public class SpecialAbilities : MonoBehaviour
         dashHUD.enabled = false;
     }
 
-
+    // SLOWFALL: When pressing 'E' player's fall speed dramatically decreases for 2s
+    IEnumerator slowfall() {
+        slowfallHUD.enabled = true;
+        fpsController.fps_Rigidbody.AddForce (0,100,0);
+        yield return new WaitForSeconds(2f);
+        slowfallHUD.enabled = false;
+    }
+    
 }
