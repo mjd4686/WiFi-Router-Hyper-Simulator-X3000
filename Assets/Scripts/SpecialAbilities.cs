@@ -11,7 +11,14 @@ public class SpecialAbilities : MonoBehaviour
     public Image superjumpHUD;
     public Image slowtimeHUD;
 
+    // sound effects
+    public AudioSource abilitiesSounds;
+    public AudioClip dashSound;
+    public AudioClip slowSound;
+    public AudioClip jumpSound;
+
     void Start() {
+        abilitiesSounds = GetComponent<AudioSource>(); 
         dashHUD.enabled = false;    
         superjumpHUD.enabled = false;    
         slowtimeHUD.enabled = false;
@@ -35,6 +42,7 @@ public class SpecialAbilities : MonoBehaviour
         dashHUD.enabled = true;
         fpsController.useStamina = false;
         fpsController.walkSpeed = 100f;
+        abilitiesSounds.PlayOneShot(dashSound);
         yield return new WaitForSeconds(0.25f);
         fpsController.useStamina = true;
         fpsController.walkSpeed = 4f;
@@ -45,6 +53,7 @@ public class SpecialAbilities : MonoBehaviour
     IEnumerator superjump() {
         superjumpHUD.enabled = true;
         fpsController.fps_Rigidbody.AddForce (0,1000,0);
+        abilitiesSounds.PlayOneShot(jumpSound);
         yield return new WaitForSeconds(2f);
         superjumpHUD.enabled = false;
     }
@@ -54,6 +63,7 @@ public class SpecialAbilities : MonoBehaviour
         slowtimeHUD.enabled = true;
         fpsController.mouseSensitivity = 0.1f;
         float time = gcScript.coroutineModifier("Countdown", false, 0f); // false to stop, ignores 3rd arg
+        abilitiesSounds.PlayOneShot(slowSound);
         yield return new WaitForSeconds(3f);
         gcScript.coroutineModifier("Countdown", true, time); // true to start, 3rd arg is new timer
         slowtimeHUD.enabled = false;
