@@ -7161,7 +7161,7 @@ MonoBehaviour:
   range: 200
   shotsToOverheat: 15
   cooldownTimer: 1
-  cooldownAnimation: {fileID: 709171754}
+  gunAnimation: {fileID: 709171754}
   cooldownHUD: {fileID: 972785297}
   isCoolingDownHUD: {fileID: 1789742604}
   muzzleFlash: {fileID: 837609938}
