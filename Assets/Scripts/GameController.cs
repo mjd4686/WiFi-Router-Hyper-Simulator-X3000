@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         StartCoroutine ("Countdown", 60f);
-        currentShotsFired  = shotsToOverheat;
+        currentShotsFired  = 0;
     }
 
     private IEnumerator Countdown (float time) { // coroutine responsible for game timer, counts down and displays in the canvas HUD. Ends if all routers are destroyed.
@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour
     void Update() {
 
         // check if cooling down before checking whether you need to cool, then if needed start cooldown timer
-        if (currentShotsFired <= 0) {
+        if (currentShotsFired >= shotsToOverheat) {
         if (isCooling) return;
                 StartCoroutine(cooldown());
                 return;
@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
         // Fire if mouse held
         if (Input.GetButton("Fire1") && Time.time > nextShot){
             nextShot = Time.time + rateOfFire;
-            currentShotsFired -= 1;
+            currentShotsFired += 1;
             StartCoroutine(overheatHUD());
             fire();
         }
@@ -113,8 +113,8 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
 
         // restore "ammunition"
-        currentShotsFired = shotsToOverheat;
-        cooldownHUD.text = "Overheat: 100%";
+        currentShotsFired = 0;
+        cooldownHUD.text = "Overheat: 0%";
         isCooling = false;
         isCoolingDownHUD.text = "";
     }
