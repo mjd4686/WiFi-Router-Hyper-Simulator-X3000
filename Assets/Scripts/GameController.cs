@@ -7,25 +7,41 @@ public class GameController : MonoBehaviour
 {
     public GameObject[] routers;
     public GameObject[] beacons;
+
+    // damage
     private float projectileDamage = 30f;
+
+    // ROF
     private float rateOfFire = 0.2f;
     private float nextShot = 0f;
     public float range = 200f;
 
+    // cooldown
+    public int shotsToOverheat = 15;
+    private int currentShotsFired;
+    public float cooldownTimer = 1f;
+    private bool isCooling = false;
+    public Animator cooldownAnimation;
+    public Text cooldownHUD;
+    public Text isCoolingDownHUD;
+
+    // particles for firing and impact
     public ParticleSystem muzzleFlash;
     public GameObject impact;
 
+    // game clock
     public Text timerLabel;
     private float time;
 
-    // public Camera cameraView;
+    // public Camera cameraView; // if using camera
 
     // Start is called before the first frame update
     void Start() {
         StartCoroutine ("Countdown", 60f);
+        currentShotsFired  = shotsToOverheat;
     }
 
-    private IEnumerator Countdown (float time) {
+    private IEnumerator Countdown (float time) { // coroutine responsible for game timer, counts down and displays in the canvas HUD. Ends if all routers are destroyed.
         while (time >= 0f) {
             if (routers.Length == 0) {
                 Debug.Log("All routers destroyed!");
@@ -43,16 +59,27 @@ public class GameController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+
+        // check if cooling down before checking whether you need to cool, then if needed start cooldown timer
+        if (currentShotsFired <= 0) {
+        if (isCooling) return;
+                StartCoroutine(cooldown());
+                return;
+        }
+
         // Fire if mouse held
         if (Input.GetButton("Fire1") && Time.time > nextShot){
             nextShot = Time.time + rateOfFire;
+            StartCoroutine(overheatHUD());
             fire();
+            currentShotsFired -= 1;
         }
         
         //routers & beacons
         routers = GameObject.FindGameObjectsWithTag("Router");
         beacons = GameObject.FindGameObjectsWithTag("Beacon");
 
+        // Old timer code (counts up)
         // if (routers.Length == 0) {
         //     Debug.Log("All routers destroyed!");
         // }
@@ -65,16 +92,41 @@ public class GameController : MonoBehaviour
         // }
     }
 
-    void fire() {
+    IEnumerator overheatHUD() {
+        float cooldownPercentage = Mathf.Round((((float)currentShotsFired / (float)shotsToOverheat) * 100));
+        cooldownHUD.text = string.Format("Overheat: {0}%", cooldownPercentage);
+        yield return new WaitForSeconds(0.25f);
+    }
+
+    IEnumerator cooldown() { // gun cooldown timer coroutine 
+        Debug.Log("Weapon is in cooldown");
+
+        isCooling = true;
+        cooldownAnimation.SetBool("cooling", true); // trigger cooldown animation
+
+        isCoolingDownHUD.text = "Cooling down";
+        
+        // workaround for the delay causing you to fire before done cooling down by 0.25 secs
+        yield return new WaitForSeconds(cooldownTimer - 0.25f);
+        cooldownAnimation.SetBool("cooling", false);
+        yield return new WaitForSeconds(0.25f);
+
+        // restore "ammunition"
+        currentShotsFired = shotsToOverheat;
+        isCooling = false;
+        isCoolingDownHUD.text = "";
+    }
+
+    void fire() { // responsible for all actions related to the raycast shooting
         muzzleFlash.Play();
-        // Vector3 fwd = cameraView.transform.forward;
+        // Vector3 fwd = cameraView.transform.forward; // if we attach a Camera to the script
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(transform.position, fwd, out hit)) {
-        // if (Physics.Raycast(cameraView.transform.position, fwd, out hit, range)) {
+        // if (Physics.Raycast(cameraView.transform.position, fwd, out hit, range)) { // see above Camera comment
             Debug.Log(hit.collider.name);
-            if (hit.transform.gameObject.tag == "Router") {
+            if (hit.transform.gameObject.tag == "Router") { // check the tag of the target being shot and give an appropriate Health System
                 HealthSystem routerHealth = hit.transform.GetComponent<HealthSystem>();
                 routerHealth.DoDamage(projectileDamage);
             } else if (hit.transform.gameObject.tag == "Beacon") {
@@ -82,8 +134,8 @@ public class GameController : MonoBehaviour
                 beaconHealth.DoDamage(projectileDamage);
             } else {
                 Debug.Log("Didn't shoot router!");
-                GameObject impactHit = Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(impactHit, 3f);
+                GameObject impactHit = Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal)); // make an impact particle system
+                Destroy(impactHit, 3f); // clear old impact sites after 3 seconds for performance
             }
         }
     }
