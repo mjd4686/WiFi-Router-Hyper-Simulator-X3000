@@ -48,4 +48,12 @@ public class HealthSystem : MonoBehaviour
         // let the game know an object has been removed
         Destroy(gameObject);
     }
+
+    public float getOriginalHealth() {
+        return originalHealth;
+    }
+
+    public int getRouterType() {
+        return routerType;
+    }
 }

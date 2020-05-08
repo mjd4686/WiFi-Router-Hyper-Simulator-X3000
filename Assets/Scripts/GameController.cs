@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     private int currentShotsFired;
     public float cooldownTimer = 1f;
     private bool isCooling = false;
-    public Animator cooldownAnimation;
+    public Animator gunAnimation;
     public Text cooldownHUD;
     public Text isCoolingDownHUD;
 
@@ -61,9 +61,13 @@ public class GameController : MonoBehaviour
     void Update() {
 
         // check if cooling down before checking whether you need to cool, then if needed start cooldown timer
+        if (isCooling) {
+            gunAnimation.SetBool("firing", false);
+            return;
+        }
         if (currentShotsFired >= shotsToOverheat) {
-        if (isCooling) return;
                 StartCoroutine(cooldown());
+    
                 return;
         }
 
@@ -73,11 +77,28 @@ public class GameController : MonoBehaviour
             currentShotsFired += 1;
             StartCoroutine(overheatHUD());
             fire();
+        } else {
+            gunAnimation.SetBool("firing", false);
         }
         
         //routers & beacons
         routers = GameObject.FindGameObjectsWithTag("Router");
         beacons = GameObject.FindGameObjectsWithTag("Beacon");
+
+        // checks if you've killed all the beacons or their hub
+        List<GameObject> tierIIIHub = new List<GameObject>();
+        foreach(var router in routers) {
+            HealthSystem routerMaxHealth = router.GetComponent<HealthSystem>();
+            if(routerMaxHealth.getRouterType() == 3) {
+                if(beacons.Length == 0) Destroy(router);
+                else tierIIIHub.Add(router);
+            }
+        }
+        if(tierIIIHub.Count == 0) {
+            foreach(var beacon in beacons) {
+                Destroy(beacon);
+            }
+        }
 
         // Old timer code (counts up)
         // if (routers.Length == 0) {
@@ -103,13 +124,13 @@ public class GameController : MonoBehaviour
         Debug.Log("Weapon is in cooldown");
 
         isCooling = true;
-        cooldownAnimation.SetBool("cooling", true); // trigger cooldown animation
+        gunAnimation.SetBool("cooling", true); // trigger cooldown animation
 
         isCoolingDownHUD.text = "Cooling down";
         
         // workaround for the delay causing you to fire before done cooling down by 0.25 secs
         yield return new WaitForSeconds(cooldownTimer - 0.25f);
-        cooldownAnimation.SetBool("cooling", false);
+        gunAnimation.SetBool("cooling", false);
         yield return new WaitForSeconds(0.25f);
 
         // restore "ammunition"
@@ -121,6 +142,7 @@ public class GameController : MonoBehaviour
 
     void fire() { // responsible for all actions related to the raycast shooting
         muzzleFlash.Play();
+        gunAnimation.SetBool("firing", true);
         // Vector3 fwd = cameraView.transform.forward; // if we attach a Camera to the script
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         RaycastHit hit;
