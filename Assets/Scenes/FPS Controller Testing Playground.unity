@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -476, y: -192.6}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -467, y: 15}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29644980
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fb51ab89d45e90a418158b9766af4cf9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8c45af62612fd645a8ad985ff94f651, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -332,8 +332,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -533, y: -193}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -584, y: 14}
+  m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195705158
 MonoBehaviour:
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 63e1963a27e279745a2e24976b1ae396, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b52e07e1c52409d45b705ee354e71283, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6258,7 +6258,8 @@ GameObject:
   - component: {fileID: 961239022}
   - component: {fileID: 961239024}
   - component: {fileID: 961239023}
-  m_Layer: 5
+  - component: {fileID: 961239026}
+  m_Layer: 10
   m_Name: dashHUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6320,6 +6321,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961239021}
   m_CullTransparentMesh: 0
+--- !u!20 &961239026
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961239021}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &971010947
 GameObject:
   m_ObjectHideFlags: 0
@@ -7770,7 +7814,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 1949399741}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 16128
+    m_Bits: 1024
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 3
@@ -7835,6 +7879,11 @@ MonoBehaviour:
   destroyed: {fileID: 8300000, guid: c14429a7e42cddf4c933eec8e30f9c33, type: 3}
   damaged: {fileID: 8300000, guid: f8b562687c978ea4898d55c4bd23c34d, type: 3}
   overheatHiss: {fileID: 8300000, guid: 9abc4f134b6ace143af4d3f72a05d417, type: 3}
+  GameOver: {fileID: 8300000, guid: 9e18d00956c7e414c8c4f9018187def7, type: 3}
+  GameBegin: {fileID: 8300000, guid: e657ffbca2aa58d4386c44e1ba282cff, type: 3}
+  YouWin: {fileID: 8300000, guid: 3af24f17b00e1db4ca79403a7b7fbfa2, type: 3}
+  YouLose: {fileID: 8300000, guid: 79b13807e16e6e743bfe1566b42575d2, type: 3}
+  CockedAndLoaded: {fileID: 8300000, guid: f4f34684da68a4444896a3aed87efd54, type: 3}
   range: 200
   shotsToOverheat: 15
   cooldownTimer: 1
@@ -7856,7 +7905,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
