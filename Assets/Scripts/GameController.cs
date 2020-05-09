@@ -43,12 +43,17 @@ public class GameController : MonoBehaviour
     public Text timerLabel;
     // private float time; // for old timer
     public float currTime; // for slowtime special ability in SpecialAbilities.cs
-
+    
+    private int difficultyLevel;
     // public Camera cameraView; // if using camera
 
     // Start is called before the first frame update
     void Start() {
-        StartCoroutine ("Countdown", 60f);
+        difficultyLevel = PlayerPrefs.GetInt("Difficulty");
+        float clockSeconds = 60f;
+        if(difficultyLevel == 1) clockSeconds = 120f;
+        if(difficultyLevel == 1) clockSeconds = 45f;
+        StartCoroutine ("Countdown", clockSeconds);
         currentShotsFired  = 0;
         crosshairEngaged.enabled = false;
         gunSounds = GetComponent<AudioSource>();

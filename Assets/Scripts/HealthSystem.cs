@@ -9,6 +9,8 @@ public class HealthSystem : MonoBehaviour
     public int routerType; // 1 = Tier I, 2 = II, 3 = III hub, 4 = III beacon
     public bool isDead = false;
 
+    private int difficultyLevel;
+
     // values of the different routers
     private float tier_i = 100f;
     private float tier_ii = 500f;
@@ -16,22 +18,26 @@ public class HealthSystem : MonoBehaviour
     private float tier_iii_b = 150f;
 
     void Start() {
+        difficultyLevel = PlayerPrefs.GetInt("Difficulty");
+        float multiplier = 1f;
+        if(difficultyLevel == 1) multiplier = 0.5f;
+        if(difficultyLevel == 3) multiplier = 1.25f; 
         switch (routerType) {
             case 1:
-                originalHealth = tier_i;
-                health = tier_i;
+                originalHealth = tier_i * multiplier;
+                health = tier_i * multiplier;
                 break;
             case 2:
-                originalHealth = tier_ii;
-                health = tier_ii;
+                originalHealth = tier_ii * multiplier;
+                health = tier_ii * multiplier;
                 break;
             case 3:
-                originalHealth = tier_iii_h;
-                health = tier_iii_h;
+                originalHealth = tier_iii_h * multiplier;
+                health = tier_iii_h * multiplier;
                 break;
             case 4:
-                originalHealth = tier_iii_b;
-                health = tier_iii_b;
+                originalHealth = tier_iii_b * multiplier;
+                health = tier_iii_b * multiplier;
                 break;
             default:
                 // Debug.Log("Invalid router type");

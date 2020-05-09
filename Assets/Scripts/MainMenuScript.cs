@@ -51,6 +51,8 @@ public class MainMenuScript : MonoBehaviour
 
         DifficultyLevel.text = currentDifficulty;
         DifficultyTooltip.text = tooltips[d];
+
+        PlayerPrefs.SetInt("Difficulty", d);
     }
 
     public void ResetLeaderboard() {
