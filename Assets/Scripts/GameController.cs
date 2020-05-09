@@ -18,11 +18,6 @@ public class GameController : MonoBehaviour
     public AudioClip destroyed;
     public AudioClip damaged;
     public AudioClip overheatHiss;
-    public AudioClip GameOver;
-    public AudioClip GameBegin;
-    public AudioClip YouWin;
-    public AudioClip YouLose;
-    public AudioClip CockedAndLoaded;
 
     // damage
     private float projectileDamage = 30f;
@@ -51,7 +46,6 @@ public class GameController : MonoBehaviour
     public float currTime; // for slowtime special ability in SpecialAbilities.cs
     
     private int difficultyLevel;
-    private bool gameOverSoundsPlayed;
     // public Camera cameraView; // if using camera
 
     // Start is called before the first frame update
@@ -61,29 +55,19 @@ public class GameController : MonoBehaviour
         if(difficultyLevel == 1) clockSeconds = 120f;
         if(difficultyLevel == 1) clockSeconds = 45f;
         StartCoroutine ("Countdown", clockSeconds);
-        // StartCoroutine(WaitToPlay(GameBegin, CockedAndLoaded)); // depreciating, unecessary complication
-        // StopCoroutine("WaitToPlay");
-        gunSounds.PlayOneShot(GameBegin);
         currentShotsFired  = 0;
         crosshairEngaged.enabled = false;
         gunSounds = GetComponent<AudioSource>();
-        gameOverSoundsPlayed = false;
-        routers = GameObject.FindGameObjectsWithTag("Router");
-        beacons = GameObject.FindGameObjectsWithTag("Beacon");
     }
 
     private IEnumerator Countdown (float time) { // coroutine responsible for game timer, counts down and displays in the canvas HUD. Ends if all routers are destroyed.
         while (time >= 0f) {
             if (routers.Length == 0) {
                 Debug.Log("All routers destroyed!");
-<<<<<<< HEAD
                 // Score Calculation Here.  
                 PlayerPrefs.SetInt("timeLeft", (int)time);
                 PlayerPrefs.SetInt("completed", 1);
                 SceneManager.LoadScene("ScoreBoard");
-=======
-                break;
->>>>>>> 730a63d17c30b7a2fc065fde39d30833cfe7fd7f
             } else {
                 timerLabel.text = string.Format ("{0} seconds", time);
             }
@@ -91,30 +75,8 @@ public class GameController : MonoBehaviour
             time--;
             yield return new WaitForSeconds(1);
         }
-        if(routers.Length != 0) {
-            if(!gameOverSoundsPlayed) {
-                // StartCoroutine(WaitToPlay(GameOver, YouLose));
-                // StopCoroutine("WaitToPlay");
-                gunSounds.PlayOneShot(YouLose);
-                gameOverSoundsPlayed = true;
-            }
-        } else if(routers.Length == 0) {
-            if(!gameOverSoundsPlayed) {
-                // StartCoroutine(WaitToPlay(GameOver, YouWin));
-                // StopCoroutine("WaitToPlay");
-                gunSounds.PlayOneShot(YouWin);
-                gameOverSoundsPlayed = true;
-            }
-        }
         Debug.Log("Countdown Complete!");
     }
-
-    // IEnumerator WaitToPlay(AudioClip clip1, AudioClip clip2) { // Let one clip play after another
-    //     gunSounds.PlayOneShot(clip1);
-    //     while(gunSounds.isPlaying) yield return null;
-
-    //     gunSounds.PlayOneShot(clip2);
-    // }
 
     // modify the coroutines from another script (currently only used by SpecialAbilities slowtime)
     // returns the current time right now, which is makes it less useful for other purposes
