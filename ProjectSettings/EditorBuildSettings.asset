@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/FPS Controller Testing Playground.unity
-    guid: 3c15acace764b08459c141d249650424
-  - enabled: 1
-    path: Assets/Scenes/FPS Controller Testing Playground.unity
-    guid: 3c15acace764b08459c141d249650424
-  - enabled: 1
     path: Assets/Scenes/GameScene_HighscoreTable.unity
     guid: 7b983534fcd6adb4d8ec50e55837c14a
   - enabled: 1
