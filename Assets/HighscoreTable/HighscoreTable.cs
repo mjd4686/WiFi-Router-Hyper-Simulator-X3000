@@ -23,28 +23,35 @@ public class HighscoreTable : MonoBehaviour {
     private List<Transform> highscoreEntryTransformList;
 
     private void Awake() {
-        //PlayerPrefs.DeleteAll();
         entryContainer = transform.Find("highscoreEntryContainer");
         entryTemplate = entryContainer.Find("highscoreEntryTemplate");
 
         entryTemplate.gameObject.SetActive(false);
 
+        //PlayerPrefs.DeleteKey("highscoreTable");
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
         if (highscores == null) {
             // There's no stored table, initialize
             Debug.Log("Initializing table with default values...");
-            AddHighscoreEntry(1000000, "JER");
-            AddHighscoreEntry(897621, "JAK");
-            AddHighscoreEntry(872931, "MAR");
-            AddHighscoreEntry(785123, "SOM");
+            AddHighscoreEntry(1000000, "CMK");
+            AddHighscoreEntry(897621, "JOE");
+            AddHighscoreEntry(872931, "DAV");
+            AddHighscoreEntry(785123, "CAT");
             AddHighscoreEntry(542024, "MAX");
-            AddHighscoreEntry(691231418, "HAX");
+            AddHighscoreEntry(68245, "AAA");
             // Reload
             jsonString = PlayerPrefs.GetString("highscoreTable");
             highscores = JsonUtility.FromJson<Highscores>(jsonString);
         }
+
+        RefreshHighscoreTable();
+    }
+
+    private void RefreshHighscoreTable() {
+        string jsonString = PlayerPrefs.GetString("highscoreTable");
+        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
         // Sort entry list by Score
         for (int i = 0; i < highscores.highscoreEntryList.Count; i++) {
@@ -55,6 +62,12 @@ public class HighscoreTable : MonoBehaviour {
                     highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
                     highscores.highscoreEntryList[j] = tmp;
                 }
+            }
+        }
+
+        if (highscoreEntryTransformList != null) {
+            foreach (Transform highscoreEntryTransform in highscoreEntryTransformList) {
+                Destroy(highscoreEntryTransform.gameObject);
             }
         }
 
@@ -106,13 +119,22 @@ public class HighscoreTable : MonoBehaviour {
         default:
             entryTransform.Find("trophy").gameObject.SetActive(false);
             break;
+        case 1:
+            entryTransform.Find("trophy").GetComponent<Image>().color = UtilsClass.GetColorFromString("FFD200");
+            break;
+        case 2:
+            entryTransform.Find("trophy").GetComponent<Image>().color = UtilsClass.GetColorFromString("C6C6C6");
+            break;
+        case 3:
+            entryTransform.Find("trophy").GetComponent<Image>().color = UtilsClass.GetColorFromString("B76F56");
+            break;
 
         }
 
         transformList.Add(entryTransform);
     }
 
-    private void AddHighscoreEntry(int score, string name) {
+    public void AddHighscoreEntry(int score, string name) {
         // Create HighscoreEntry
         HighscoreEntry highscoreEntry = new HighscoreEntry { score = score, name = name };
         
@@ -134,6 +156,8 @@ public class HighscoreTable : MonoBehaviour {
         string json = JsonUtility.ToJson(highscores);
         PlayerPrefs.SetString("highscoreTable", json);
         PlayerPrefs.Save();
+
+        RefreshHighscoreTable();
     }
 
     private class Highscores {
