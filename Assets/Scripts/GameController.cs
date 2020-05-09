@@ -64,10 +64,7 @@ public class GameController : MonoBehaviour
             if (routers.Length == 0) {
                 Debug.Log("All routers destroyed!");
             } else {
-                var minutes = (time / 60) - 1;
-                var seconds = time % 60;
-                //update the label value
-                timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
+                timerLabel.text = string.Format ("{0} seconds", time);
             }
             currTime = time;
             time--;
