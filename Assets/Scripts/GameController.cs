@@ -48,6 +48,7 @@ public class GameController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
+        routers = GameObject.FindGameObjectsWithTag("Router");
         difficultyLevel = PlayerPrefs.GetInt("Difficulty");
         float clockSeconds = 60f;
         if(difficultyLevel == 1) clockSeconds = 120f;
