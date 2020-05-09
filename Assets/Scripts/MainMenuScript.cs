@@ -19,7 +19,10 @@ public class MainMenuScript : MonoBehaviour
     void Start() {
         currentDifficulty = difficulties[d];
         DifficultyLevel.text = currentDifficulty;
-        DifficultyTooltip.text = tooltips[d];    
+        DifficultyTooltip.text = tooltips[d];
+        PlayerPrefs.SetInt("shotsFired", 0);
+        PlayerPrefs.SetInt("shotsHit", 0);
+        PlayerPrefs.SetInt("routerScore", 0);
     }
 
     // Update is called once per frame

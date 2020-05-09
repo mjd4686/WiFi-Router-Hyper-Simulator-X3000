@@ -160,6 +160,8 @@ public class GameController : MonoBehaviour
     }
 
     void fire() { // responsible for all actions related to the raycast shooting
+        var shotsFired = PlayerPrefs.GetInt("shotsFired");
+        PlayerPrefs.SetInt("shotsFired", shotsFired+1);
         muzzleFlash.Play();
         gunAnimation.SetBool("firing", true);
         gunSounds.PlayOneShot(gunshot,1);
@@ -176,12 +178,16 @@ public class GameController : MonoBehaviour
                 routerHealth.DoDamage(projectileDamage);
                 crosshairEngaged.enabled = true;
                 gunSounds.PlayOneShot(damaged);
+                var shotsHit = PlayerPrefs.GetInt("shotsHit");
+                PlayerPrefs.SetInt("shotsHit", shotsHit + 1);
             } else if (hit.transform.gameObject.tag == "Beacon") {
                 HealthSystem beaconHealth = hit.transform.GetComponent<HealthSystem>();
                 if(beaconHealth.isDead) gunSounds.PlayOneShot(destroyed);
                 beaconHealth.DoDamage(projectileDamage);
                 crosshairEngaged.enabled = true;
                 gunSounds.PlayOneShot(damaged);
+                var shotsHit = PlayerPrefs.GetInt("shotsHit");
+                PlayerPrefs.SetInt("shotsHit", shotsHit + 1);
             } else {
                 //Debug.Log("Didn't shoot router!");
                 GameObject impactHit = Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal)); // make an impact particle system
