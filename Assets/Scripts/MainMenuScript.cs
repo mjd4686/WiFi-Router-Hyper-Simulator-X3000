@@ -25,6 +25,10 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene("GameScene_HighscoreTable");
     }
     
+    public void Settings(){
+        SceneManager.LoadScene("Settings");
+    }
+    
     public void Back(){
         SceneManager.LoadScene("MainMenu");
     }
