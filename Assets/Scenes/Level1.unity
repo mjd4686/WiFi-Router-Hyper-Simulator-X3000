@@ -5792,7 +5792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 3
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 566175873}
   destroyed: {fileID: 8300000, guid: e3b9d5c2ae6a4e44c89857dd3bf29c54, type: 3}
 --- !u!65 &409903350
 BoxCollider:
@@ -6745,7 +6745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 1
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 566175873}
   destroyed: {fileID: 8300000, guid: 122018798586f3948bde13f8c3a2976e, type: 3}
 --- !u!23 &467256283
 MeshRenderer:
@@ -7497,7 +7497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 2
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 566175873}
   destroyed: {fileID: 8300000, guid: 53305bea43a658d489f7d2f07eddb559, type: 3}
 --- !u!65 &515936991
 BoxCollider:
@@ -7841,7 +7841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 2
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 566175873}
   destroyed: {fileID: 8300000, guid: 53305bea43a658d489f7d2f07eddb559, type: 3}
 --- !u!65 &534666200
 BoxCollider:
@@ -16274,7 +16274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 4
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 566175873}
   destroyed: {fileID: 8300000, guid: c14429a7e42cddf4c933eec8e30f9c33, type: 3}
 --- !u!65 &1130724702
 BoxCollider:
@@ -29665,7 +29665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 4
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 566175873}
   destroyed: {fileID: 8300000, guid: c14429a7e42cddf4c933eec8e30f9c33, type: 3}
 --- !u!65 &1783735610
 BoxCollider:
@@ -32053,7 +32053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 4
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 566175873}
   destroyed: {fileID: 8300000, guid: c14429a7e42cddf4c933eec8e30f9c33, type: 3}
 --- !u!65 &1963764787
 BoxCollider:
