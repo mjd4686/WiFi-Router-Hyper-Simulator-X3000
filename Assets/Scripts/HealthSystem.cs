@@ -60,7 +60,15 @@ public class HealthSystem : MonoBehaviour
         // death animation
         // let the game know an object has been removed
         var routerScore = PlayerPrefs.GetInt("routerScore");
-        PlayerPrefs.SetInt("routerScore", routerScore + 100);
+        switch (routerType)
+        {
+            default:
+                break;
+
+            case 1: PlayerPrefs.SetInt("routerScore", routerScore + 100); break;
+            case 2: PlayerPrefs.SetInt("routerScore", routerScore + 500); break;
+            case 4: PlayerPrefs.SetInt("routerScore", routerScore + 50); break;
+        }
         gunSounds.PlayOneShot(destroyed);
         Destroy(gameObject);
     }
