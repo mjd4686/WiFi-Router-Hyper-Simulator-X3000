@@ -67,15 +67,13 @@ public class GameController : MonoBehaviour
         crosshairEngaged.enabled = false;
         gunSounds = GetComponent<AudioSource>();
         gameOverSoundsPlayed = false;
-        routers = GameObject.FindGameObjectsWithTag("Router");
-        beacons = GameObject.FindGameObjectsWithTag("Beacon");
     }
 
     private IEnumerator Countdown (float time) { // coroutine responsible for game timer, counts down and displays in the canvas HUD. Ends if all routers are destroyed.
         while (time >= 0f) {
             if (routers.Length == 0) {
                 Debug.Log("All routers destroyed!");
-                break;
+           
             } else {
                 timerLabel.text = string.Format ("{0} seconds", time);
             }
@@ -83,14 +81,14 @@ public class GameController : MonoBehaviour
             time--;
             yield return new WaitForSeconds(1);
         }
-        if(routers.Length != 0) {
+        if(routers.Length != 0 && time <= 0f) {
             if(!gameOverSoundsPlayed) {
                 // StartCoroutine(WaitToPlay(GameOver, YouLose));
                 // StopCoroutine("WaitToPlay");
                 gunSounds.PlayOneShot(YouLose);
                 gameOverSoundsPlayed = true;
             }
-        } else if(routers.Length == 0) {
+        } else if(routers.Length == 0 && time < 45f) {
             if(!gameOverSoundsPlayed) {
                 // StartCoroutine(WaitToPlay(GameOver, YouWin));
                 // StopCoroutine("WaitToPlay");
