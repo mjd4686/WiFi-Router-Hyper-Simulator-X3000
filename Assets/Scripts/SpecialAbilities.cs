@@ -43,7 +43,7 @@ public class SpecialAbilities : MonoBehaviour
         fpsController.useStamina = false;
         fpsController.walkSpeed = 100f;
         abilitiesSounds.PlayOneShot(dashSound);
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.15f);
         fpsController.useStamina = true;
         fpsController.walkSpeed = 4f;
         dashHUD.enabled = false;
@@ -52,7 +52,7 @@ public class SpecialAbilities : MonoBehaviour
     // SUPERJUMP: When pressing 'E' player flies upwards supah fah and supah high
     IEnumerator superjump() {
         superjumpHUD.enabled = true;
-        fpsController.fps_Rigidbody.AddForce (0,1000,0);
+        fpsController.fps_Rigidbody.AddForce (0,500,0);
         abilitiesSounds.PlayOneShot(jumpSound);
         yield return new WaitForSeconds(2f);
         superjumpHUD.enabled = false;

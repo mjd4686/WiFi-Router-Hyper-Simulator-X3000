@@ -129,18 +129,6 @@ public class GameController : MonoBehaviour
                 Destroy(beacon);
             }
         }
-
-        // Old timer code (counts up)
-        // if (routers.Length == 0) {
-        //     Debug.Log("All routers destroyed!");
-        // }
-        // else {
-        //     time += Time.deltaTime;
-        //     var minutes = time / 60;
-        //     var seconds = time % 60;
-        //     //update the label value
-        //     timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
-        // }
     }
 
     IEnumerator overheatHUD() {

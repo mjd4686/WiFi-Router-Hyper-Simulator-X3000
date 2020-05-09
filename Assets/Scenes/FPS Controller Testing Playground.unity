@@ -520,6 +520,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 4
   isDead: 0
+  gunSounds: {fileID: 1949399746}
+  destroyed: {fileID: 8300000, guid: c14429a7e42cddf4c933eec8e30f9c33, type: 3}
 --- !u!65 &249055957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -906,6 +908,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 1
   isDead: 0
+  gunSounds: {fileID: 1949399746}
+  destroyed: {fileID: 8300000, guid: 122018798586f3948bde13f8c3a2976e, type: 3}
 --- !u!1 &530525976
 GameObject:
   m_ObjectHideFlags: 0
@@ -6650,6 +6654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 1
   isDead: 0
+  gunSounds: {fileID: 1949399746}
+  destroyed: {fileID: 8300000, guid: c14429a7e42cddf4c933eec8e30f9c33, type: 3}
 --- !u!1 &1122398043
 GameObject:
   m_ObjectHideFlags: 0
@@ -6858,6 +6864,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 2
   isDead: 0
+  gunSounds: {fileID: 1949399746}
+  destroyed: {fileID: 8300000, guid: 53305bea43a658d489f7d2f07eddb559, type: 3}
 --- !u!1001 &1334065838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7194,6 +7202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 1
   isDead: 0
+  gunSounds: {fileID: 1949399746}
+  destroyed: {fileID: 8300000, guid: e3b9d5c2ae6a4e44c89857dd3bf29c54, type: 3}
 --- !u!1 &1664193830 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1743903104223250, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
@@ -7624,6 +7634,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 3
   isDead: 0
+  gunSounds: {fileID: 1949399746}
+  destroyed: {fileID: 8300000, guid: e3b9d5c2ae6a4e44c89857dd3bf29c54, type: 3}
 --- !u!65 &1826848010
 BoxCollider:
   m_ObjectHideFlags: 0

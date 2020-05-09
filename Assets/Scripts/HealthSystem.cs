@@ -9,6 +9,9 @@ public class HealthSystem : MonoBehaviour
     public int routerType; // 1 = Tier I, 2 = II, 3 = III hub, 4 = III beacon
     public bool isDead = false;
 
+    public AudioSource gunSounds;
+    public AudioClip destroyed;
+
     private int difficultyLevel;
 
     // values of the different routers
@@ -56,6 +59,7 @@ public class HealthSystem : MonoBehaviour
     void Die() {
         // death animation
         // let the game know an object has been removed
+        gunSounds.PlayOneShot(destroyed);
         Destroy(gameObject);
     }
 
