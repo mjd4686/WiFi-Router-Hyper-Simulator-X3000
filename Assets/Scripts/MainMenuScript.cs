@@ -20,7 +20,20 @@ public class MainMenuScript : MonoBehaviour
     public void PlayGame(){
         SceneManager.LoadScene("Level1");
     }
+    
     public void Leaderboard(){
         SceneManager.LoadScene("GameScene_HighscoreTable");
+    }
+    
+    public void Back(){
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ChangeDifficulty(){
+        
+    }
+
+    public void ResetLeaderboard(){
+        
     }
 }
