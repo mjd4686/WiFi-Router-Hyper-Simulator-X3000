@@ -23,6 +23,8 @@ public class MainMenuScript : MonoBehaviour
         PlayerPrefs.SetInt("shotsFired", 0);
         PlayerPrefs.SetInt("shotsHit", 0);
         PlayerPrefs.SetInt("routerScore", 0);
+        PlayerPrefs.SetInt("timeLeft", 0);
+        PlayerPrefs.SetInt("completed", 0);
     }
 
     // Update is called once per frame

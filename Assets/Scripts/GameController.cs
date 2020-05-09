@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -63,6 +64,10 @@ public class GameController : MonoBehaviour
         while (time >= 0f) {
             if (routers.Length == 0) {
                 Debug.Log("All routers destroyed!");
+                // Score Calculation Here.  
+                PlayerPrefs.SetInt("timeLeft", (int)time);
+                PlayerPrefs.SetInt("completed", 1);
+                SceneManager.LoadScene("ScoreBoard");
             } else {
                 timerLabel.text = string.Format ("{0} seconds", time);
             }
@@ -124,10 +129,13 @@ public class GameController : MonoBehaviour
             }
         }
         if(tierIIIHub.Count == 0) {
-            foreach(var beacon in beacons) {
+            var routerScore = PlayerPrefs.GetInt("routerScore");
+            foreach (var beacon in beacons) {
                 gunSounds.PlayOneShot(destroyed);
                 Destroy(beacon);
+                routerScore += 50;
             }
+            PlayerPrefs.SetInt("routerScore", routerScore);
         }
     }
 
