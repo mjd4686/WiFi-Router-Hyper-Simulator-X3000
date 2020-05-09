@@ -59,6 +59,8 @@ public class HealthSystem : MonoBehaviour
     void Die() {
         // death animation
         // let the game know an object has been removed
+        var routerScore = PlayerPrefs.GetInt("routerScore");
+        PlayerPrefs.SetInt("routerScore", routerScore + 100);
         gunSounds.PlayOneShot(destroyed);
         Destroy(gameObject);
     }
