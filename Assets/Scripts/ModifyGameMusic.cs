@@ -13,7 +13,7 @@ public class ModifyGameMusic : MonoBehaviour
     void Start() {
         gameMusic = GetComponent<AudioSource>();
         currentMusic = musicLibrary[0];
-        lengthOfLibrary = musicLibrary.Count;
+        lengthOfLibrary = musicLibrary.Count;   
         StartCoroutine(MusicDelay());
     }
 
