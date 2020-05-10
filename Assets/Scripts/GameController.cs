@@ -51,8 +51,8 @@ public class GameController : MonoBehaviour
         routers = GameObject.FindGameObjectsWithTag("Router");
         difficultyLevel = PlayerPrefs.GetInt("Difficulty");
         float clockSeconds = 60f;
-        if(difficultyLevel == 1) clockSeconds = 120f;
-        if(difficultyLevel == 1) clockSeconds = 45f;
+        if(difficultyLevel == 0) clockSeconds = 120f;
+        if(difficultyLevel == 2) clockSeconds = 45f;
         StartCoroutine ("Countdown", clockSeconds);
         currentShotsFired  = 0;
         crosshairEngaged.enabled = false;

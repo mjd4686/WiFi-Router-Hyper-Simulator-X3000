@@ -91,8 +91,8 @@ public class scoreWriter : MonoBehaviour
         switch (difficultyLevel)
         {
             default: difficultyScore.text = string.Format("Easy x{0}", 1); playerScore *= 1;  break;
-            case 2: difficultyScore.text = string.Format("Intermediate x{0}", 5); playerScore *= 5; break;
-            case 3: difficultyScore.text = string.Format("Hard x{0}", 10); playerScore *= 10; break;
+            case 1: difficultyScore.text = string.Format("Intermediate x{0}", 5); playerScore *= 5; break;
+            case 2: difficultyScore.text = string.Format("Hard x{0}", 10); playerScore *= 10; break;
         }
         yourScore.text = string.Format("{0}", playerScore);
     }
@@ -102,6 +102,7 @@ public class scoreWriter : MonoBehaviour
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
         int bottomScore = highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1].score;
+        PlayerPrefs.SetInt("playerScore", playerScore);
         if((highscores.highscoreEntryList.Count - 1) < 10)
         {
             SceneManager.LoadScene("GameScene_InputWindow");

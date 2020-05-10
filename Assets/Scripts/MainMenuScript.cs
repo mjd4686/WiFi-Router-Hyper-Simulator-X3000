@@ -61,6 +61,6 @@ public class MainMenuScript : MonoBehaviour
     }
 
     public void ResetLeaderboard() {
-        // do something @jerry
+        PlayerPrefs.SetString("highscoreTable", null);
     }
 }
