@@ -33,8 +33,16 @@ public class MainMenuScript : MonoBehaviour
         
     }
 
-    public void PlayGame() {
+    public void PlayGame() { // single scene mode
+        SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void PlayGameL1() {
         SceneManager.LoadScene("Level1");
+    }
+
+    public void PlayGameL2() {
+        SceneManager.LoadScene("Level2");
     }
     
     public void Leaderboard() {
