@@ -49,6 +49,13 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void NextTut() {
+        SceneManager.LoadScene("Explainer2");
+    }
+    public void BackTut() {
+        SceneManager.LoadScene("Explainer");
+    }
+
     public void ChangeDifficulty() {
         if(d < 2) d++;
         else d -= 2;

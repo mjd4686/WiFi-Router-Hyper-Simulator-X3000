@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene_InputWindow.unity
     guid: 5e32a3b243e23d34daad0d2a45007b10
+  - enabled: 1
+    path: Assets/Scenes/Explainer.unity
+    guid: 795946bf94b9fc5418a1c8e698de13ad
+  - enabled: 1
+    path: Assets/Scenes/Explainer2.unity
+    guid: 08e1b3c17d1a5b64196dd8168fc075b6
   m_configObjects: {}
