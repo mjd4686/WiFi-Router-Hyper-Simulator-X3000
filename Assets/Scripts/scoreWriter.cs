@@ -112,6 +112,10 @@ public class scoreWriter : MonoBehaviour
     public void onClick()
     {
         string jsonString = PlayerPrefs.GetString("highscoreTable");
+        if (jsonString == null)
+        {
+            SceneManager.LoadScene("GameScene_InputWindow");
+        }
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
         int bottomScore = highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1].score;
         PlayerPrefs.SetInt("playerScore", playerScore);
