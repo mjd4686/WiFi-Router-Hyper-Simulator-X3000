@@ -36,7 +36,7 @@ public class UI_Testing : MonoBehaviour
             {
                 // Ok
                 UI_Blocker.Hide_Static();
-                var score = PlayerPrefs.GetInt("PlayerScore");
+                var score = PlayerPrefs.GetInt("playerScore");
                 highscoreTable.AddHighscoreEntry(score, nameText);
             });
 
