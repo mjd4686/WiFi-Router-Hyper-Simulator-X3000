@@ -75,6 +75,7 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
         Debug.Log("Countdown Complete!");
+        SceneManager.LoadScene("ScoreBoard");
     }
 
     // modify the coroutines from another script (currently only used by SpecialAbilities slowtime)
