@@ -34,6 +34,8 @@ public class scoreWriter : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         playerScore = 0;
         timeScore.text = string.Format("+{0} * 10", PlayerPrefs.GetInt("timeLeft"));
         playerScore += PlayerPrefs.GetInt("timeLeft") * 10;
@@ -96,6 +98,16 @@ public class scoreWriter : MonoBehaviour
         }
         yourScore.text = string.Format("{0}", playerScore);
     }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            onClick();
+        }
+            
+    }
+    
 
     public void onClick()
     {
