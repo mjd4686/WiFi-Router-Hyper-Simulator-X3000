@@ -91,7 +91,6 @@ public class GameController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-
         // check if cooling down before checking whether you need to cool, then if needed start cooldown timer
         if (isCooling) {
             gunAnimation.SetBool("firing", false);
