@@ -8680,7 +8680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 2
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: 53305bea43a658d489f7d2f07eddb559, type: 3}
 --- !u!65 &309334752
 BoxCollider:
@@ -11527,7 +11527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 1
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: 122018798586f3948bde13f8c3a2976e, type: 3}
 --- !u!23 &411332076
 MeshRenderer:
@@ -15463,7 +15463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 1
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: 122018798586f3948bde13f8c3a2976e, type: 3}
 --- !u!23 &564294036
 MeshRenderer:
@@ -16913,7 +16913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 1
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: 122018798586f3948bde13f8c3a2976e, type: 3}
 --- !u!23 &613193968
 MeshRenderer:
@@ -30628,7 +30628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 4
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: c14429a7e42cddf4c933eec8e30f9c33, type: 3}
 --- !u!65 &1160838126
 BoxCollider:
@@ -31341,7 +31341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 2
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: 53305bea43a658d489f7d2f07eddb559, type: 3}
 --- !u!65 &1177952663
 BoxCollider:
@@ -32546,7 +32546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 2
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: 53305bea43a658d489f7d2f07eddb559, type: 3}
 --- !u!65 &1205974694
 BoxCollider:
@@ -33378,7 +33378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 4
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: c14429a7e42cddf4c933eec8e30f9c33, type: 3}
 --- !u!65 &1237439764
 BoxCollider:
@@ -35703,7 +35703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 1
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: 122018798586f3948bde13f8c3a2976e, type: 3}
 --- !u!23 &1309309310
 MeshRenderer:
@@ -37117,7 +37117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 1
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: 122018798586f3948bde13f8c3a2976e, type: 3}
 --- !u!23 &1370065938
 MeshRenderer:
@@ -43746,7 +43746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 4
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: c14429a7e42cddf4c933eec8e30f9c33, type: 3}
 --- !u!65 &1413203331
 BoxCollider:
@@ -48530,7 +48530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 3
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: e3b9d5c2ae6a4e44c89857dd3bf29c54, type: 3}
 --- !u!65 &1600006050
 BoxCollider:
@@ -51818,7 +51818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 1
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: 122018798586f3948bde13f8c3a2976e, type: 3}
 --- !u!23 &1719212999
 MeshRenderer:
@@ -56723,7 +56723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 1
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: 122018798586f3948bde13f8c3a2976e, type: 3}
 --- !u!23 &1929612814
 MeshRenderer:
@@ -57506,7 +57506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   routerType: 4
   isDead: 0
-  gunSounds: {fileID: 0}
+  gunSounds: {fileID: 1179055929}
   destroyed: {fileID: 8300000, guid: c14429a7e42cddf4c933eec8e30f9c33, type: 3}
 --- !u!65 &1957119736
 BoxCollider:
