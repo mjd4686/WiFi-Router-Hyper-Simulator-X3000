@@ -28,7 +28,7 @@ public class UI_Testing : MonoBehaviour
             UI_Blocker.Show_Static();
 
 
-            UI_InputWindow.Show_Static("Player Name", "", "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVXYWZ", 3, () =>
+            UI_InputWindow.Show_Static("Player Name", "", "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 3, () =>
             {
                 // Cancel
                 UI_Blocker.Hide_Static();
