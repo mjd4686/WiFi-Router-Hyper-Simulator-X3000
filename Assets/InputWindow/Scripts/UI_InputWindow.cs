@@ -79,7 +79,7 @@ public class UI_InputWindow : MonoBehaviour {
     private char ValidateChar(string validCharacters, char addedChar) {
         if (validCharacters.IndexOf(addedChar) != -1) {
             // Valid
-            return addedChar;
+            return Char.ToUpper(addedChar);
         } else {
             // Invalid
             return '\0';
